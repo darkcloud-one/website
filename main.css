@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("fonts/Rubik/static/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("fonts/Rubik/static/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("fonts/Rubik/static/Rubik-Light.ttf") format("truetype");
+  font-weight: 100;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #ECEFF4;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 'header'
+                       'main'
+                       'footer';
+  grid-template-rows: 22rem auto 4rem;
+  overflow-x: hidden;
+}
+
+.background-box {
+  position: fixed;
+  z-index: -100;
+  background-color: #475762;
+  height: 100vh;
+  width: 50vw;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.main-header {
+  display: grid;
+  grid-area: header;
+  grid-template-areas: 'image image'
+                       'firstName lastName'
+                       'titleOne titleTwo';
+  grid-template-rows: auto 3rem 3rem;
+  grid-template-columns: 50% 50%;
+}
+
+.profile-circle {
+  width: 10rem;
+  height: 10rem;
+  background-color: #12CC94;
+  grid-area: image;
+  padding-bottom: 1rem;
+  border-radius: 100%;
+  overflow: hidden;
+  justify-self: center;
+  margin-bottom: 1rem;
+  align-self: end;
+  border-style: solid;
+  border-color: #475762;
+  border-width: 0.25rem;
+}
+
+.profile-circle__image {
+  width: 100%;
+  position: relative;
+  top: -0.75rem;
+}
+
+.first-name {
+  grid-area: firstName;
+  justify-self: right;
+  padding-right: 0.5rem;
+  color: #ECEFF4;
+  align-self: end;
+}
+
+.last-name {
+  grid-area: lastName;
+  justify-self: left;
+  padding-left: 0.5rem;
+  color: #475762;
+  align-self: end;
+}
+
+.job-title {
+  color: #12cc94;
+  font-weight: normal;
+}
+
+.job-title__one {
+  grid-area: titleOne;
+  justify-self: right;
+  padding-right: 0.5rem;
+  align-self: start;
+}
+
+.job-title__two {
+  grid-area: titleTwo;
+  justify-self: left;
+  padding-left: 0.5rem;
+  align-self: start;
+}
+
+.main-content {
+  grid-area: main;
+  margin-top: 1.5rem;
+}
+
+.main-details {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.main-details__question {
+  color: #ECEFF4;
+  justify-self: left;
+  margin: 0.5rem;
+  margin-left: 2rem;
+  font-weight: 700;
+}
+
+.main-details__answer {
+  color: #475762;
+  justify-self: left;
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.skills-box {
+  margin: auto;
+  margin-top: 2rem;
+  background-color: rgba(81, 81, 81, 0.1);
+  width: 95%;
+  height: 16rem;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: grid;
+  grid-template-areas: 'title title title'
+                       'skill1 skill2 skill3'
+                       'resume resume resume';
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3rem auto 4rem;
+  align-items: center;
+}
+
+.skills-box__title {
+  color: #ECEFF4;
+  padding-left: 1.5rem;
+  font-weight: normal;
+}
+
+.skills-box__skill {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-box__skill--skill1 {
+  grid-area: skill1;
+}
+
+.skills-box__skill--skill2 {
+  grid-area: skill2;
+}
+
+.skills-box__skill--skill3 {
+  grid-area: skill3;
+}
+
+.skills-box__skill--circle {
+  width: 50%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #12CC94;
+  clip-path: rect(-50% 100% 100% 50%);
+  /*h(hide) w  h  w(hide)*/
+}

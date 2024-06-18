@@ -56,7 +56,6 @@ body {
 .profile-circle {
   width: 10rem;
   height: 10rem;
-  background-color: #12CC94;
   grid-area: image;
   padding-bottom: 1rem;
   border-radius: 100%;
@@ -145,10 +144,10 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   display: grid;
-  grid-template-areas: 'title title title'
-                       'skill1 skill2 skill3'
-                       'resume resume resume';
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'title title title title'
+                       'skill1 skill2 skill3 skill4'
+                       'resume resume resume resume';
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: 3rem auto 4rem;
   align-items: center;
 }
@@ -162,27 +161,64 @@ body {
 .skills-box__skill {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills-box__skill--skill1 {
   grid-area: skill1;
+  color: #ECEFF4;
 }
 
 .skills-box__skill--skill2 {
   grid-area: skill2;
+  color: #ECEFF4;
 }
 
 .skills-box__skill--skill3 {
   grid-area: skill3;
+  color: #475762;
+}
+
+.skills-box__skill--skill4 {
+  grid-area: skill4;
+  color: #475762;
 }
 
 .skills-box__skill--circle {
   width: 50%;
   aspect-ratio: 1/1;
   border-radius: 100%;
-  border-style: solid;
-  border-width: 6px;
-  border-color: #12CC94;
-  clip-path: rect(-50% 100% 100% 50%);
-  /*h(hide) w  h  w(hide)*/
+  margin-bottom: 1rem;
+}
+
+.skills-box__skill--skill1 > .skills-box__skill--circle {
+  background: rgba(120, 233, 199, 0.4) conic-gradient(#12CC94 0deg 270deg, transparent 270deg 360deg);
+}
+
+.skills-box__skill--skill2 > .skills-box__skill--circle {
+  background: rgba(120, 233, 199, 0.4) conic-gradient(#12CC94 0deg 160deg, transparent 160deg 360deg);
+}
+
+.skills-box__skill--skill3 > .skills-box__skill--circle {
+  background: rgba(120, 233, 199, 0.4) conic-gradient(#12CC94 0deg 300deg, transparent 300deg 360deg);
+}
+
+.skills-box__skill--skill4 > .skills-box__skill--circle {
+  background: rgba(120, 233, 199, 0.4) conic-gradient(#12CC94 0deg 230deg, transparent 230deg 360deg);
+}
+
+.skills-box__button {
+  grid-area: resume;
+  width: 80%;
+  height: 70%;
+  align-self: center;
+  justify-self: center;
+  background-color: #12CC94;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color:#ECEFF4;
+  font-size: 1.1rem;
 }

@@ -287,11 +287,11 @@ body {
 
 .main-footer__link--note {
   color: #ECEFF4;
-  line-height: 100%;
+  line-height: 2rem;
 }
 
 .main-footer__link--image {
-  height: 50%;
+  height: 2rem;
   aspect-ratio: 1/1;
   background-color: #ECEFF4;
   border-radius: 100%;

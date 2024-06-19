@@ -63,6 +63,7 @@ body {
   margin-bottom: 1rem;
   align-self: end;
   border-style: solid;
+  background: #ECEFF4;
   border-color: #475762;
   border-width: 0.25rem;
 }
@@ -71,6 +72,11 @@ body {
   width: 100%;
   position: relative;
   top: -0.75rem;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards
 }
 
 .first-name {
@@ -79,6 +85,12 @@ body {
   padding-right: 0.5rem;
   color: #ECEFF4;
   align-self: end;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 }
 
 .last-name {
@@ -87,12 +99,24 @@ body {
   padding-left: 0.5rem;
   color: #475762;
   align-self: end;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 .job-title {
   color: #12cc94;
   font-weight: normal;
   align-self: start;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
 }
 
 .job-title__one {
@@ -112,6 +136,12 @@ body {
   margin-top: 1.5rem;
   padding-left: 2.5%;
   padding-right: 2.5%;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards
 }
 
 .main-details {
@@ -300,4 +330,13 @@ body {
 
 .main-footer__link--image > img {
   height: 80%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -22,6 +22,21 @@
 }
 
 body {
+  background-color: #475762;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-box__top {
+  background-color: #ECEFF4;
+  position: fixed;
+  height: 50vh;
+  width: 100vw;
+  top: 0;
+}
+
+.content-area {
   background-color: #ECEFF4;
   width: 100vw;
   min-height: 100vh;
@@ -30,14 +45,13 @@ body {
                        'main'
                        'footer';
   grid-template-rows: 22rem auto 4rem;
-  overflow-x: hidden;
+  position: relative; 
 }
 
 .background-box {
-  position: fixed;
-  z-index: -100;
+  position: absolute;
   background-color: #475762;
-  height: 100vh;
+  height: 100%;
   width: 50vw;
   border-top-right-radius: 24px;
 }
@@ -295,6 +309,7 @@ body {
 }
 
 .main-footer {
+  z-index: 1;
   grid-area: footer;
   background-color: #475762;
   border-top-right-radius: 24px;

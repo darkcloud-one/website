@@ -93,25 +93,26 @@ body {
 .job-title {
   color: #12cc94;
   font-weight: normal;
+  align-self: start;
 }
 
 .job-title__one {
   grid-area: titleOne;
   justify-self: right;
   padding-right: 0.5rem;
-  align-self: start;
 }
 
 .job-title__two {
   grid-area: titleTwo;
   justify-self: left;
   padding-left: 0.5rem;
-  align-self: start;
 }
 
 .main-content {
   grid-area: main;
   margin-top: 1.5rem;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .main-details {
@@ -123,7 +124,7 @@ body {
   color: #ECEFF4;
   justify-self: left;
   margin: 0.5rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   font-weight: 700;
 }
 
@@ -134,12 +135,20 @@ body {
   margin-left: 1.5rem;
 }
 
+.main-details__answer--image {
+  height: 1.5rem;
+}
+
+.main-details__answer--image > img {
+  height: 90%;
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+}
+
 .skills-box {
-  margin: auto;
   margin-top: 2rem;
   background-color: rgba(81, 81, 81, 0.1);
-  width: 95%;
-  height: 16rem;
+  min-height: 16rem;
   border-radius: 16px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -219,6 +228,40 @@ body {
   outline: none;
   border: none;
   border-radius: 10px;
-  color:#ECEFF4;
   font-size: 1.1rem;
+}
+
+.skills-box__button > a{
+  text-decoration: none;
+  color:#ECEFF4;
+  width: 100%;
+  height: 100%;
+}
+
+.certifications-box {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.certifications-box__title {
+  color: #ECEFF4;
+}
+
+.certifications-box__certifications {
+  margin-top: 1.5rem;
+  display: grid;
+  padding: 0;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.certifications-box__certification {
+  margin: auto;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  width: 70%;
+}
+
+.certifications-box__certification > img {
+  width: 100%;
 }

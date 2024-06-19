@@ -146,6 +146,7 @@ body {
 
 .skills-box {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: rgba(81, 81, 81, 0.1);
   min-height: 16rem;
   border-radius: 16px;
@@ -235,35 +236,6 @@ body {
   color:#ECEFF4;
   width: 100%;
   height: 100%;
-}
-
-.certifications-box {
-  margin: auto;
-  margin-top: 2rem;
-}
-
-.certifications-box__title {
-  color: #ECEFF4;
-}
-
-.certifications-box__certifications {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: grid;
-  padding: 0;
-  list-style-type: none;
-  grid-template-columns: repeat(4, 25%);
-}
-
-.certifications-box__certification {
-  margin: auto;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  width: 70%;
-}
-
-.certifications-box__certification > img {
-  width: 100%;
 }
 
 .main-footer {

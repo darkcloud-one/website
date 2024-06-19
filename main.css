@@ -22,18 +22,19 @@
 }
 
 body {
-  background-color: #475762;
+  background-color: #ECEFF4;
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-.background-box__top {
-  background-color: #ECEFF4;
+.background-box__bottom {
+  background-color: #475762;
   position: fixed;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
-  top: 0;
+  left: 0;
+  bottom: -50vh;
 }
 
 .content-area {

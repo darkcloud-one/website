@@ -60,11 +60,10 @@ body {
 .main-header {
   display: grid;
   grid-area: header;
-  grid-template-areas: 'image image'
-                       'firstName lastName'
-                       'titleOne titleTwo';
+  grid-template-areas: 'image'
+                       'name'
+                       'title';
   grid-template-rows: auto 3rem 3rem;
-  grid-template-columns: 50% 50%;
 }
 
 .profile-circle {
@@ -94,35 +93,39 @@ body {
   animation-fill-mode: forwards
 }
 
-.first-name {
-  grid-area: firstName;
-  justify-self: right;
-  padding-right: 0.5rem;
+.name-container {
+  grid-area: name;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-container__first {
   color: #ECEFF4;
-  align-self: end;
   opacity: 0;
+  display: inline-block;
   animation-name: fadeIn;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-delay: 1.5s;
+  width: 49%;
+  text-align: right;
 }
 
-.last-name {
-  grid-area: lastName;
-  justify-self: left;
-  padding-left: 0.5rem;
+.name-container__last {
   color: #475762;
-  align-self: end;
   opacity: 0;
+  display: inline-block;
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-delay: 2s;
+  width: 49%;
 }
 
-.job-title {
+.title-container {
+  grid-area: title;
   color: #12cc94;
   font-weight: normal;
   align-self: start;
@@ -132,18 +135,7 @@ body {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-delay: 2.5s;
-}
-
-.job-title__one {
-  grid-area: titleOne;
-  justify-self: right;
-  padding-right: 0.5rem;
-}
-
-.job-title__two {
-  grid-area: titleTwo;
-  justify-self: left;
-  padding-left: 0.5rem;
+  text-align: center;
 }
 
 .main-content {
@@ -155,7 +147,7 @@ body {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-timing-function: ease-out;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
   animation-fill-mode: forwards
 }
 
@@ -355,4 +347,84 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+@media (min-width: 50rem) {
+  .content-area {
+    display: grid;
+    grid-template-areas: 'header main'
+                         'header main'
+                         'header main'
+                         'header footer';
+    grid-template-rows: 1fr 1fr 1fr 4rem;
+    grid-template-columns: 15rem 3fr;
+    position: relative; 
+  }
+  .background-box {
+    position: absolute;
+    top: 1.5rem;
+    background-color: #475762;
+    height: 100%;
+    width: 15rem;
+    border-top-right-radius: 24px;
+  }
+  .main-header {
+    display: grid;
+    grid-area: header;
+    grid-template-areas: 'image'
+                         'name'
+                         'title';
+    grid-template-rows: 16rem 3rem 3rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .profile-circle {
+    position: absolute;
+    top: 4rem;
+    right: -3rem;
+  }  
+
+  .name-container {
+    justify-content: center;
+    gap: 5px;
+  }
+
+
+  .name-container__first {
+    width: auto;
+  }
+
+  
+  .name-container__last {
+    color: #ECEFF4;
+    animation-delay: 1.5s;
+    width: auto;
+  }
+
+  .title-container {
+    animation-delay: 1.5s;
+  }
+
+  .main-content {
+    margin-left: 3rem;
+    margin-top: 12rem;
+  }
+
+  .main-details__question {
+    color: #475762;
+  }
+
+  .skills-box__title {
+    color: #475762;
+  }
+  
+  .skill-circle__inner--dark {
+    background-color: #ECEFF4;
+  }
+  .skills-box__skill--skill1,
+  .skills-box__skill--skill2 {
+    color: #475762;
+  }
+
 }

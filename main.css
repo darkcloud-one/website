@@ -393,26 +393,44 @@ body {
 
   .name-container__first {
     width: auto;
+    animation-delay: 0s;
   }
 
   
   .name-container__last {
     color: #ECEFF4;
-    animation-delay: 1.5s;
+    animation-delay: 0s;
     width: auto;
   }
 
   .title-container {
-    animation-delay: 1.5s;
+    animation-delay: 0s;
   }
 
   .main-content {
     margin-left: 3rem;
+    margin-right: 3rem;
     margin-top: 12rem;
+    width: 100%;
+    max-width: 40rem;
+    justify-self: center;
+    animation-delay: 0s;
   }
 
   .main-details__question {
     color: #475762;
+  }
+
+  .skills-box {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: none;
+  }
+
+  .skill-circle__inner > div {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: none;
   }
 
   .skills-box__title {
